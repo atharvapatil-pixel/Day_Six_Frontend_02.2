@@ -1,0 +1,46 @@
+DOM Manipulation
+
+🔹 Change Text on Button Click
+<div id="message">Hello World</div>
+<button id="changeBtn">Change Text</button>
+
+<script>
+  document.getElementById("changeBtn").addEventListener("click", () => {
+    document.getElementById("message").innerText = "Text Changed!";
+  });
+</script>
+
+
+🔹 Add New List Item
+<ul id="list"><li>Item 1</li></ul>
+<button id="addItem">Add Item</button>
+
+<script>
+  document.getElementById("addItem").addEventListener("click", () => {
+    const li = document.createElement("li");
+    li.innerText = "New Item";
+    document.getElementById("list").appendChild(li);
+  });
+</script>
+
+
+🔹 Remove Element
+<p id="removeMe">Remove this text</p>
+<button id="removeBtn">Remove</button>
+
+<script>
+  document.getElementById("removeBtn").addEventListener("click", () => {
+    document.getElementById("removeMe").remove();
+  });
+</script>
+
+
+🔹 Display Input While Typing
+<input type="text" id="inputBox" />
+<p id="output"></p>
+
+<script>
+  document.getElementById("inputBox").addEventListener("input", (e) => {
+    document.getElementById("output").innerText = e.target.value;
+  });
+</script>
