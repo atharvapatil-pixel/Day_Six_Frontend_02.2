@@ -1,0 +1,43 @@
+Objects
+
+🔹 Create Object
+const user = {
+  name: "Akshay",
+  age: 25,
+  city: "Pune",
+};
+
+
+🔹 Print keys and values
+console.log(Object.keys(user));   // ["name", "age", "city"]
+console.log(Object.values(user)); // ["Akshay", 25, "Pune"]
+
+Object.keys(user).forEach(key => {
+  console.log(key, ":", user[key]);
+});
+
+
+🔹 Add & Delete Properties
+user.mobileNumber = "9876543210"; // add
+delete user.city;                // delete
+
+console.log(user);
+
+
+🔹 Group by Role
+const users = [
+  { name: "Pratik", role: "admin" },
+  { name: "Amit", role: "user" },
+  { name: "Neha", role: "admin" },
+  { name: "Ravi", role: "user" },
+];
+
+const grouped = users.reduce((acc, curr) => {
+  if (!acc[curr.role]) {
+    acc[curr.role] = [];
+  }
+  acc[curr.role].push(curr);
+  return acc;
+}, {});
+
+console.log(grouped);
