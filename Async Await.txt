@@ -1,0 +1,15 @@
+Async / Await
+
+async function getUserDataAsync(userId) {
+  try {
+    if (userId === 1) {
+      return { name: "Akshay", age: 25, city: "Pune" };
+    } else {
+      throw new Error("Invalid User");
+    }
+  } catch (error) {
+    console.log("Error:", error.message);
+  }
+}
+
+getUserDataAsync(1).then(data => console.log(data));
