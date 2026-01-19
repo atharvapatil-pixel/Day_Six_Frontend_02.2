@@ -1,0 +1,27 @@
+Variables & Data Types
+
+Assignment 1: Print type of different data types
+
+function printType(value) {
+  console.log(value, "=>", typeof value);
+}
+
+printType(10);          // number
+printType("Hello");    // string
+printType(true);       // boolean
+printType(null);       // object (JS bug)
+printType(undefined); // undefined
+
+Difference between null and undefined
+let a;        // undefined (not assigned)
+let b = null; // null (intentionally empty)
+
+console.log(a); // undefined
+console.log(b); // null
+
+
+Explanation:
+
+undefined → variable declared but not assigned
+
+null → explicitly set as empty value
