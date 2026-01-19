@@ -1,0 +1,22 @@
+Array Methods
+
+Given array:
+
+const arr = [20, 4, 23, 56, 1, 23, 65, 78, 45, 3, 9, 6, 23, 1, 50];
+
+🔹 map → multiply by 2
+const doubled = arr.map(n => n * 2);
+console.log(doubled);
+
+🔹 filter → numbers > 10
+const greaterThan10 = arr.filter(n => n > 10);
+console.log(greaterThan10);
+
+🔹 reduce → sum
+const sum = arr.reduce((total, n) => total + n, 0);
+console.log(sum);
+
+🔹 Reverse array
+const reversed = [...arr].reverse();
+console.log(reversed);
+
