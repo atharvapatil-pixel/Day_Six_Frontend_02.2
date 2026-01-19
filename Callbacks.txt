@@ -1,0 +1,11 @@
+Callbacks
+
+function executeAfter10Sec(callback) {
+  setTimeout(() => {
+    callback();
+  }, 10000);
+}
+
+executeAfter10Sec(() => {
+  console.log("Executed after 10 seconds");
+});
