@@ -1,0 +1,50 @@
+Promises
+
+🔹 getUserData Function
+
+function getUserData(userId) {
+  return new Promise((resolve, reject) => {
+    if (userId === 1) {
+      resolve({ name: "Akshay", age: 25, city: "Pune" });
+    } else if (userId === 0) {
+      reject("Invalid User");
+    }
+  });
+}
+
+getUserData(1)
+  .then(data => {
+    console.log("Success:", data);
+  })
+  .catch(error => {
+    console.log("Error:", error);
+  });
+
+
+🔹 Execution Sequence Question
+console.log("1: Start");
+
+setTimeout(() => {
+  console.log("2: setTimeout");
+}, 0);
+
+Promise.resolve().then(() => {
+  console.log("3: Promise");
+});
+
+console.log("4: End");
+
+Output Order:
+1: Start
+4: End
+3: Promise
+2: setTimeout
+
+
+Reason:
+
+Synchronous first
+
+Microtask (Promise)
+
+Macrotask (setTimeout)
