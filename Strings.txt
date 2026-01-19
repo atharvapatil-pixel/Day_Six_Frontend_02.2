@@ -1,0 +1,23 @@
+Strings
+
+🔹 Difference between == and ===
+console.log(5 == "5");   // true  (only value checked)
+console.log(5 === "5"); // false (value + type checked)
+
+
+Explanation:
+
+== → loose equality (type conversion)
+
+=== → strict equality (no conversion)
+
+
+🔹 Convert "hello world" to Title Case
+const str = "hello world";
+
+const titleCase = str
+  .split(" ")
+  .map(word => word[0].toUpperCase() + word.slice(1))
+  .join(" ");
+
+console.log(titleCase); // Hello World
